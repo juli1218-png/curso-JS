@@ -38,7 +38,6 @@
 
 // console.log("5" - 2);
 // console.log(true + 1);
-
 // Explícita
 // console.log(typeof "123");
 // console.log(typeof Number("123.33333333"));
@@ -177,88 +176,88 @@
 // si compra menos de 5 no tiene descuento 0%
 
 // Productos
-let licor = prompt(`
-*** Listado de Productos ***
+// let licor = prompt(`
+// *** Listado de Productos ***
 
-Selecciones por favor un producto: 
+// Selecciones por favor un producto: 
 
-1. Ron Amarillo
-2. Aguardiente Antioqueño
-3. Aguardiente Nectar
-4. Vodka Absolute
-*** Listado de Productos ***
-    `);
+// 1. Ron Amarillo
+// 2. Aguardiente Antioqueño
+// 3. Aguardiente Nectar
+// 4. Vodka Absolute
+// *** Listado de Productos ***
+//     `);
 
-let nombreLicor = "";
-let precio = 0;
-switch (licor) {
-    case "1":
-        nombreLicor = "Ron Amarillo"
-        precio = 100000
-        alert(`Seleccionaste ${nombreLicor}`)
-        break;
-    case "2":
-        nombreLicor = "Aguardiente Antioqueño"
-        precio = 200000
-        alert(`Seleccionaste ${nombreLicor}`)
+// let nombreLicor = "";
+// let precio = 0;
+// switch (licor) {
+//     case "1":
+//         nombreLicor = "Ron Amarillo"
+//         precio = 100000
+//         alert(`Seleccionaste ${nombreLicor}`)
+//         break;
+//     case "2":
+//         nombreLicor = "Aguardiente Antioqueño"
+//         precio = 200000
+//         alert(`Seleccionaste ${nombreLicor}`)
 
-        break;
-    case "3":
-        nombreLicor = "Aguardiente Nectar"
-        precio = 300000
-        alert(`Seleccionaste ${nombreLicor}`)
+//         break;
+//     case "3":
+//         nombreLicor = "Aguardiente Nectar"
+//         precio = 300000
+//         alert(`Seleccionaste ${nombreLicor}`)
 
-        break;
-    case "4":
-        nombreLicor = "Vodka Absolute"
-        precio = 400000
-        alert(`Seleccionaste ${nombreLicor}`)
-        break;
+//         break;
+//     case "4":
+//         nombreLicor = "Vodka Absolute"
+//         precio = 400000
+//         alert(`Seleccionaste ${nombreLicor}`)
+//         break;
         
-        default:
-        alert(`Opción incorecta, vuelva a intentarlo`)
-        break;
-}
+//         default:
+//         alert(`Opción incorecta, vuelva a intentarlo`)
+//         break;
+// }
 
-let cantidad = parseInt(prompt(`Ingrese la cantidad: `));
+// let cantidad = parseInt(prompt(`Ingrese la cantidad: `));
 
-let dto = 0;
+// let dto = 0;
 
-const formatoCOP = new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-    maximumFractionDigits: '2',
-    })
+// const formatoCOP = new Intl.NumberFormat('es-CO', {
+//     style: 'currency',
+//     currency: 'COP',
+//     maximumFractionDigits: '2',
+//     })
 
-if (cantidad >= 10) {
-    dto = 0.2;
-} else if (cantidad > 5 && cantidad < 10) {
-    dto = 0.1;
-} else { dto = 0 }
+// if (cantidad >= 10) {
+//     dto = 0.2;
+// } else if (cantidad > 5 && cantidad < 10) {
+//     dto = 0.1;
+// } else { dto = 0 }
 
-let aplicarDto = 0;
-let subtotal = 0;
+// let aplicarDto = 0;
+// let subtotal = 0;
 
-if (cantidad > 10) {
-    aplicarDto = precio - (precio * dto);
-    subtotal = aplicarDto * cantidad;
-} else if (cantidad > 5 && cantidad < 10) {
-    aplicarDto = precio - (precio * dto);
-    subtotal = aplicarDto * cantidad;
-} else {
-    aplicarDto = precio - (precio * dto);
-    subtotal = aplicarDto * cantidad;
-}
-console.log(`
-*** Detalle de la compra ***
-Producto: Producto: ${formatoCOP.format(nombreLicor)}
-Cantidad: ${formatoCOP.format(cantidad)}
-Precio: ${formatoCOP.format(precio)}
-Descuento: ${formatoCOP.format(dto*100)}% 
-Descuento aplicado: ${formatoCOP.format(aplicarDto)}
-Subtotal: ${formatoCOP.format(subtotal)}
-*** Vuelva Pronto ***
-`);
+// if (cantidad > 10) {
+//     aplicarDto = precio - (precio * dto);
+//     subtotal = aplicarDto * cantidad;
+// } else if (cantidad > 5 && cantidad < 10) {
+//     aplicarDto = precio - (precio * dto);
+//     subtotal = aplicarDto * cantidad;
+// } else {
+//     aplicarDto = precio - (precio * dto);
+//     subtotal = aplicarDto * cantidad;
+// }
+// console.log(`
+// *** Detalle de la compra ***
+// Producto: Producto: ${formatoCOP.format(nombreLicor)}
+// Cantidad: ${formatoCOP.format(cantidad)}
+// Precio: ${formatoCOP.format(precio)}
+// Descuento: ${formatoCOP.format(dto*100)}% 
+// Descuento aplicado: ${formatoCOP.format(aplicarDto)}
+// Subtotal: ${formatoCOP.format(subtotal)}
+// *** Vuelva Pronto ***
+// `);
 
 // const precio = 1234567.89;
 // const totalAPagar= 1122445566.667788;
@@ -293,3 +292,94 @@ Subtotal: ${formatoCOP.format(subtotal)}
 //     maximumFractionDigits: '10',
 // })
 // console.log(formatoESP.format(totalAPagar));
+
+
+// *** bucle for ***
+
+// El bucle for repite un bloque de código mientras una condición sea verdadera, normalmente con un contador que controla las iteraciones.
+
+// for (inicialización; condición; actualización) {
+// código a repetir
+// }
+
+// Flujo paso a paso
+
+// 0. let i = 0          → inicializa
+// 1. ¿i < 5? ✅         → evalúa condición
+// 2. console.log(i)     → ejecuta el cuerpo
+// 3. i++                → actualiza
+
+// console.log("Tabla de multiplicar de 10");
+
+// for (let i = 1; i <= 10; i++) {    
+//       console.log(`${ i} x 3 = ${i * 3}`)
+// }
+
+// pintar en pantalla los numeros del 1 al 10
+
+// console.log("numeros del 1 al 10");
+
+// for (let i = 1; i <= 10; i++) {    
+//     console.log(i)
+// }
+
+//  pintar en pantalla los numeros del 20 al 30
+
+// console.log("numeros del 20 al 30");
+
+// for (let i = 20; i <= 30; i++) {    
+//     console.log(i)
+// }
+
+
+//  pintar en pantalla los numeros del 50 al 40
+
+// console.log("numeros del 50 al 40");
+
+// for (let i = 50; i >= 40; i--) {    
+//     console.log(i)
+// }
+
+//  pintar en pantalla los numeros de 2 en 2 hasta el 20
+
+// console.log("numeros de 2 en 2 hasta el 20");
+
+// for (let i = 99 ; i >= 70; i-=2) {    
+//     console.log(i)
+// }
+
+// modulo 
+
+// for(let i=1; i<=100; i++){
+//     if(i%2 !=0){
+//         console.log(i)
+//     }
+// }
+
+//sumatoria de los primeros 10 numeros 
+
+// let sumatoria = 1
+
+// for(i= 2; sumatoria<15; i++ ){
+//     sumatoria=sumatoria+i
+//     console.log(sumatoria)
+// }
+
+//factoriales
+
+// let sumatoria = 1
+
+// for(i= 2 ; i<=5; i++ ){
+//     sumatoria=sumatoria*i
+//     console.log(sumatoria)
+// }
+
+// contar cuantos numeros multiplos de 3 hay del 1 al 50
+
+let numMultiplicados = 0
+
+for(i=1 ; i<=50; i++){
+    if(i%3 ===0){
+}
+
+console.log(numMultiplicados)}
